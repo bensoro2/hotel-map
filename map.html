@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>แผนที่ - Mini Project</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Mini Project</h1>
+        <button class="nav-toggle">☰</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">หน้าหลัก</a>
+            </li>
+            <li>
+              <a href="about.html">เกี่ยวกับฉัน</a>
+            </li>
+            <li>
+              <a href="learning.html">สิ่งที่เรียนรู้</a>
+            </li>
+            <li>
+              <a href="map.html" class="active">แผนที่</a>
+            </li>
+            <li>
+              <a href="creative.html">ความคิดสร้างสรรค์</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="map-section">
+        <h2>แผนที่ Interactive</h2>
+
+        <div class="map-container">
+          <div id="map"></div>
+          <div class="map-info">
+            <h3>รายละเอียดโรงแรม</h3>
+            <div id="place-details">
+              <p class="placeholder-text">
+                เลือกโรงแรมบนแผนที่เพื่อดูรายละเอียด
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="place-list">
+          <h3>โรงแรมหรูทั้งหมดของแต่ละภาค</h3>
+          <div class="region-hotels">
+            <div class="info-card">
+              <h4>ภาคเหนือ</h4>
+              <ul class="info-list">
+                <li>Four Seasons Resort Chiang Mai - เชียงใหม่</li>
+                <li>
+                  Anantara Golden Triangle Elephant Camp & Resort - เชียงราย
+                </li>
+                <li>Dhara Dhevi Chiang Mai - เชียงใหม่</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h4>ภาคกลาง</h4>
+              <ul class="info-list">
+                <li>Mandarin Oriental - กรุงเทพฯ</li>
+                <li>The Siam Hotel - กรุงเทพฯ</li>
+                <li>Rosewood Bangkok - กรุงเทพฯ</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h4>ภาคตะวันออก</h4>
+              <ul class="info-list">
+                <li>InterContinental Pattaya Resort - พัทยา</li>
+                <li>Soneva Kiri - เกาะกูด</li>
+                <li>Cape Dara Resort - พัทยา</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h4>ภาคใต้</h4>
+              <ul class="info-list">
+                <li>Amanpuri - ภูเก็ต</li>
+                <li>Banyan Tree Samui - เกาะสมุย</li>
+                <li>Sri Panwa Phuket - ภูเก็ต</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Mini Project - รายวิชา 104112</p>
+      </div>
+    </footer>
+
+    <script src="geojson-data.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Responsive navbar
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav');
+
+        navToggle.addEventListener('click', function() {
+          nav.classList.toggle('active');
+        });
+
+        // Map initialization
+        const map = L.map('map').setView([13.7563, 100.5018], 6);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const markers = {};
+        luxuryHotels.forEach(hotel => {
+          const marker = L.marker([hotel.coordinates[1], hotel.coordinates[0]]).addTo(map);
+
+          marker.bindPopup(`<b>${hotel.name}</b><br>${hotel.region}`);
+
+          markers[hotel.id] = marker;
+
+          marker.on('click', function() {
+            showHotelDetails(hotel);
+          });
+        });
+
+        function showHotelDetails(hotel) {
+          const placeDetails = document.getElementById('place-details');
+          placeDetails.innerHTML = `
+            <h4>${hotel.name}</h4>
+            <div class="place-image">
+              <img src="${hotel.image}" alt="${hotel.name}">
+            </div>
+            <p>${hotel.description}</p>
+            <p class="place-address">${hotel.address}</p>
+            <div class="place-rating">ระดับความหรู: ★ ${hotel.rating}</div>
+            <p><strong>ภูมิภาค:</strong> ${hotel.region}</p>
+          `;
+        }
+      });
+    </script>
+  </body>
+</html>

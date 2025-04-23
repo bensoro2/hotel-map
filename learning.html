@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>สิ่งที่เรียนรู้ - Mini Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Mini Project</h1>
+        <button class="nav-toggle">☰</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">หน้าหลัก</a>
+            </li>
+            <li>
+              <a href="about.html">เกี่ยวกับฉัน</a>
+            </li>
+            <li>
+              <a href="learning.html" class="active">สิ่งที่เรียนรู้</a>
+            </li>
+            <li>
+              <a href="map.html">แผนที่</a>
+            </li>
+            <li>
+              <a href="creative.html">ความคิดสร้างสรรค์</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="learning-section">
+        <h2>สิ่งที่เรียนรู้ในรายวิชา</h2>
+
+        <div class="learning-container">
+          <div class="learning-card">
+            <h3>HTML</h3>
+            <p>
+              เรียนรู้การสร้างโครงสร้างเว็บไซต์ด้วย HTML5
+              โดยได้ศึกษาจากในคลาสเรียน และเพิ่มเติมจากการดูวิดีโอสอนใน YouTube
+              ช่องของคนไทย ประกอบกับการค้นคว้าจากเว็บไซต์ W3Schools
+              แล้วนำความรู้มาทดลองเขียนโค้ดด้วยตัวเอง
+            </p>
+          </div>
+
+          <div class="learning-card">
+            <h3>CSS</h3>
+            <p>
+              เรียนรู้การจัดรูปแบบเว็บไซต์ด้วย CSS
+              จากการเรียนในคลาสและศึกษาเพิ่มเติมจาก YouTube
+              ของช่องคนไทยที่สอนการทำเว็บไซต์ ทำให้เข้าใจเรื่อง flexbox, grid
+              และ responsive design นอกจากนี้ยังได้ค้นคว้าเพิ่มเติมจาก W3Schools
+              ด้วย
+            </p>
+          </div>
+
+          <div class="learning-card">
+            <h3>JavaScript</h3>
+            <p>
+              เรียนรู้การสร้าง interactive ให้กับเว็บไซต์ด้วย JavaScript
+              จากคลาสเรียนเป็นหลัก และศึกษาเพิ่มเติมจาก YouTube
+              ช่องสอนเขียนโค้ดของคนไทย
+              นำสิ่งที่ได้เรียนรู้มาทดลองเขียนและปรับแต่งตามตัวอย่างจากเว็บไซต์
+              W3Schools
+            </p>
+          </div>
+
+          <div class="learning-card">
+            <h3>GeoJSON และ Leaflet</h3>
+            <p>
+              เรียนรู้การทำงานกับข้อมูลแผนที่ผ่าน GeoJSON และการใช้ Leaflet
+              จากการศึกษาในคลาส และค้นคว้าเพิ่มเติมจากเว็บไซต์ทางการของ Leaflet
+              รวมถึงตัวอย่างจากช่อง YouTube ต่างๆ
+              ลองทำและปรับแต่งจนสามารถสร้างแผนที่แบบ interactive ได้
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Mini Project - รายวิชา 104112</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav');
+
+        navToggle.addEventListener('click', function() {
+          nav.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>

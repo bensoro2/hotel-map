@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>หน้าหลัก - Mini Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Mini Project</h1>
+        <button class="nav-toggle">☰</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" class="active">หน้าหลัก</a>
+            </li>
+            <li>
+              <a href="about.html">เกี่ยวกับฉัน</a>
+            </li>
+            <li>
+              <a href="learning.html">สิ่งที่เรียนรู้</a>
+            </li>
+            <li>
+              <a href="map.html">แผนที่</a>
+            </li>
+            <li>
+              <a href="creative.html">ความคิดสร้างสรรค์</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>ยินดีต้อนรับสู่ Mini Project</h2>
+        <p>
+          โครงการนี้เป็นส่วนหนึ่งของรายวิชา 104112 Introduction to Programing
+          for Spatial Sciences
+        </p>
+        <div class="hero-buttons">
+          <a href="about.html" class="btn">เกี่ยวกับฉัน</a>
+          <a href="map.html" class="btn">ดูแผนที่</a>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature-card">
+          <h3>ข้อมูลส่วนตัว</h3>
+          <p>เรียนรู้เพิ่มเติมเกี่ยวกับผู้จัดทำโครงการนี้</p>
+          <a href="about.html" class="btn-small">อ่านเพิ่มเติม</a>
+        </div>
+
+        <div class="feature-card">
+          <h3>สิ่งที่เรียนรู้</h3>
+          <p>ข้อมูลเกี่ยวกับสิ่งที่ได้เรียนรู้จากรายวิชานี้</p>
+          <a href="learning.html" class="btn-small">อ่านเพิ่มเติม</a>
+        </div>
+
+        <div class="feature-card">
+          <h3>แผนที่ Interactive</h3>
+          <p>แผนที่ที่สามารถโต้ตอบได้ที่แสดงข้อมูลที่น่าสนใจ</p>
+          <a href="map.html" class="btn-small">เยี่ยมชม</a>
+        </div>
+
+        <div class="feature-card">
+          <h3>ความคิดสร้างสรรค์</h3>
+          <p>แนวคิดและไอเดียสร้างสรรค์เพิ่มเติม</p>
+          <a href="creative.html" class="btn-small">ดูเพิ่มเติม</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Mini Project - รายวิชา 104112</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav');
+
+        navToggle.addEventListener('click', function() {
+          nav.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>

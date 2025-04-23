@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ความคิดสร้างสรรค์ - Mini Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Mini Project</h1>
+        <button class="nav-toggle">☰</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">หน้าหลัก</a>
+            </li>
+            <li>
+              <a href="about.html">เกี่ยวกับฉัน</a>
+            </li>
+            <li>
+              <a href="learning.html">สิ่งที่เรียนรู้</a>
+            </li>
+            <li>
+              <a href="map.html">แผนที่</a>
+            </li>
+            <li>
+              <a href="creative.html" class="active">ความคิดสร้างสรรค์</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="creative-section">
+        <h2>ความคิดสร้างสรรค์</h2>
+
+        <div class="creative-intro">
+          <p>
+            ในหน้านี้จะแสดงความคิดสร้างสรรค์เพิ่มเติมที่นอกเหนือจากโจทย์ในรายวิชา
+            เพื่อแสดงความเข้าใจและทักษะที่ได้รับจากการเรียนการสอน
+          </p>
+        </div>
+
+        <div class="creative-ideas">
+          <h3>แนวคิดในการพัฒนาต่อยอด</h3>
+          <div class="idea-cards">
+            <div class="idea-card">
+              <h4>Mobile Application</h4>
+              <p>
+                พัฒนาต่อยอดเป็น Mobile Application โดยใช้ Framework เช่น React
+                Native หรือ Flutter
+                เพื่อให้ผู้ใช้สามารถเข้าถึงได้ง่ายจากสมาร์ทโฟน
+              </p>
+            </div>
+
+            <div class="idea-card">
+              <h4>Backend Integration</h4>
+              <p>
+                เพิ่ม Backend
+                และฐานข้อมูลเพื่อจัดเก็บข้อมูลโรงแรมและรายละเอียดสถานที่อย่างเป็นระบบ
+                ทำให้ข้อมูลเป็นปัจจุบันและสามารถจัดการได้ง่าย
+              </p>
+            </div>
+
+            <div class="idea-card">
+              <h4>Community Features</h4>
+              <p>
+                เพิ่มความสามารถให้ผู้ใช้สามารถแชร์ประสบการณ์ แสดงความคิดเห็น
+                และให้คะแนนโรงแรมต่างๆ เพื่อสร้างชุมชนของนักเดินทาง
+              </p>
+            </div>
+
+            <div class="idea-card">
+              <h4>AI Recommendation</h4>
+              <p>
+                พัฒนาระบบ AI
+                เพื่อแนะนำโรงแรมที่เหมาะสมตามความชอบและงบประมาณของผู้ใช้
+                ช่วยให้ผู้ใช้ตัดสินใจได้ง่ายขึ้น
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="creative-intro">
+          <h3>การออกแบบและพัฒนา</h3>
+          <p>
+            โครงการนี้ได้พัฒนาโดยใช้ HTML, CSS และ JavaScript พื้นฐาน
+            โดยไม่พึ่งพา Framework ภายนอก ยกเว้น Leaflet สำหรับการแสดงแผนที่
+            เน้นการเขียนโค้ดที่เรียบง่ายและอ่านง่าย
+            การพัฒนาเว็บไซต์นี้ทำให้ได้เรียนรู้การทำงานกับ DOM, เหตุการณ์ต่างๆ
+            ใน JavaScript และการสร้างเว็บไซต์ที่ตอบสนองต่อขนาดหน้าจอที่หลากหลาย
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Mini Project - รายวิชา 104112</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav');
+
+        navToggle.addEventListener('click', function() {
+          nav.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>
