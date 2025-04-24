@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>หน้าหลัก - Mini Project</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -15,9 +19,6 @@
           <ul>
             <li>
               <a href="index.html" class="active">หน้าหลัก</a>
-            </li>
-            <li>
-              <a href="about.html">เกี่ยวกับฉัน</a>
             </li>
             <li>
               <a href="learning.html">สิ่งที่เรียนรู้</a>
@@ -34,47 +35,84 @@
     </header>
 
     <main class="container">
-      <section class="hero">
-        <h2>ยินดีต้อนรับสู่ Mini Project</h2>
-        <p>
-          โครงการนี้เป็นส่วนหนึ่งของรายวิชา 104112 Introduction to Programing
-          for Spatial Sciences
-        </p>
-        <div class="hero-buttons">
-          <a href="about.html" class="btn">เกี่ยวกับฉัน</a>
-          <a href="map.html" class="btn">ดูแผนที่</a>
-        </div>
-      </section>
+      <section class="about-section">
+        <h2>เกี่ยวกับฉัน</h2>
 
-      <section class="features">
-        <div class="feature-card">
-          <h3>ข้อมูลส่วนตัว</h3>
-          <p>เรียนรู้เพิ่มเติมเกี่ยวกับผู้จัดทำโครงการนี้</p>
-          <a href="about.html" class="btn-small">อ่านเพิ่มเติม</a>
-        </div>
+        <div class="about-container">
+          <div class="about-image">
+            <img
+              src="./image/e65b5282-31b7-4f06-b029-eb12a574a0a7.jpg"
+              alt="รูปโปรไฟล์"
+              id="profile-image"
+            />
+          </div>
 
-        <div class="feature-card">
-          <h3>สิ่งที่เรียนรู้</h3>
-          <p>ข้อมูลเกี่ยวกับสิ่งที่ได้เรียนรู้จากรายวิชานี้</p>
-          <a href="learning.html" class="btn-small">อ่านเพิ่มเติม</a>
-        </div>
+          <div class="about-details">
+            <div class="info-card">
+              <h3>ข้อมูลส่วนตัว</h3>
+              <ul class="info-list">
+                <li>
+                  <strong>ชื่อ-นามสกุล:</strong>
+                  <span id="fullname">ถิรวุฒิ พุกกชา</span>
+                </li>
+                <li>
+                  <strong>ชื่อเล่น:</strong>
+                  <span id="nickname">นิวตั้น</span>
+                </li>
+                <li>
+                  <strong>อายุ:</strong>
+                  <span id="age">19</span> ปี
+                </li>
+                <li>
+                  <strong>ศึกษาอยู่ที่:</strong>
+                  <span id="current-education">มหาวิทยาลัยนเรศวร</span>
+                </li>
+                <li>
+                  <strong>จบการศึกษาจาก:</strong>
+                  <span id="previous-education">โรงเรียนกำแพงเพชร</span>
+                </li>
+              </ul>
+            </div>
 
-        <div class="feature-card">
-          <h3>แผนที่ Interactive</h3>
-          <p>แผนที่ที่สามารถโต้ตอบได้ที่แสดงข้อมูลที่น่าสนใจ</p>
-          <a href="map.html" class="btn-small">เยี่ยมชม</a>
-        </div>
+            <div class="info-card">
+              <h3>ความชอบส่วนตัว</h3>
+              <ul class="info-list">
+                <li>
+                  <strong>งานอดิเรก:</strong>
+                  <span id="hobbies">เล่นกีฬา เล่นกีตาร์</span>
+                </li>
+                <li>
+                  <strong>สิ่งที่ชอบ:</strong>
+                  <span id="likes">เสื้อผ้า ร้องเท้า</span>
+                </li>
+              </ul>
+            </div>
 
-        <div class="feature-card">
-          <h3>ความคิดสร้างสรรค์</h3>
-          <p>แนวคิดและไอเดียสร้างสรรค์เพิ่มเติม</p>
-          <a href="creative.html" class="btn-small">ดูเพิ่มเติม</a>
+            <div class="info-card">
+              <h3>ที่อยู่</h3>
+              <p id="address">
+                68 ม.9 ต.ทุ่งทราย อ.ทรายทองวัฒนา จ.กำแพงเพชร 62190
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="container">
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=100017612536864&locale=th_TH"
+            target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/as.newton_?fbclid=IwY2xjawJ2vuJleHRuA2FlbQIxMABicmlkETFzdTZ0S1E4TnpCV3poSWtzAR6GPfqqtTXam-bxxUJwIUnZoNJ6XD_Amh2AHWosHJU2OGH5ps5GMgBqJXkYDw_aem_j8tS57uncqqzNYXtAUagGQ"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
         <p>&copy; 2025 Mini Project - รายวิชา 104112</p>
       </div>
     </footer>
